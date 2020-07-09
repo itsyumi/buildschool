@@ -166,6 +166,8 @@ header .banner .mask {
 .main .banner {
   background-image: url("assets/asset 45.png");
   width: 100%;
+  background-size: contain;
+  height: 100vh;
   margin-bottom: 96px;
 }
 
@@ -193,10 +195,32 @@ header .banner .mask {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 110px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 290px;
+  width: 960px;
+  text-align: center;
+}
+
+.main .btn-nav a {
+  width: 184px;
+  line-height: 36px;
+  font-size: 20px;
+  border: dotted 1px #aaa;
+  border-bottom: solid 2px #b00;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #b00), color-stop(50%, #fff));
+  background-image: linear-gradient(#b00 50%, #fff 50%);
+  background-position: 0 -100%;
+  background-repeat: no-repeat;
+  background-size: 200% 200%;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.main .btn-nav a:hover {
+  background-position: top;
+  color: #fff;
 }
 
 .main .main-pic {
@@ -218,7 +242,6 @@ header .banner .mask {
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  z-index: 5;
 }
 
 .main .main-pic .info * {
@@ -377,4 +400,4 @@ header .banner .mask {
 .main .main-pic:nth-of-type(2n-0) .revolutions {
   margin-right: -685px;
 }
-/*# sourceMappingURL=Toyota.css.map */
+/*# sourceMappingURL=toyota.css.map */
