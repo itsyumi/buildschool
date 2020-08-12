@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        table {
+            table-layout: fixed;
+        }
+
+        td {
+            height: 72px;
+        }
+
+        td:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        .col-8 {
+            height: 551px;
+        }
+
+        .container {
+            padding-top: 60px;
+        }
+
+        h1 {
+            font-size: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h1></h1>
+                <div class="h4 d-flex">
+                    <h4 class="mr-3"></h4><span></span>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-12 d-flex align-items-center justify-content-between p-3">
+                        <button class="btn border rounded-circle" style="width: 34px; height: 34px; line-height: 0px;"
+                            onclick="LastMonth()"> &lt; </button>
+                        <h4>月</h4>
+                        <button class="btn border rounded-circle" style="width: 34px; height: 34px; line-height: 0px;"
+                            onclick="NextMonth()"> &gt; </button>
+                    </div>
+                </div>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr class="text-center">
+                            <th>Sun</th>
+                            <th>Mon</th>
+                            <th>Tue</th>
+                            <th>Wed</th>
+                            <th>Thu</th>
+                            <th>Fri</th>
+                            <th>Sat</th>
+                        </tr>
+                    </thead>
+
+                    <tbody></tbody>
+                </table>
+            </div>
+
+        </div>
+        <!-- <div class="row float-right mt-4">
+            <div class="col">
+                <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#addContent">
+                    新增行程
+                </button>
+            </div>
+        </div> -->
+    </div>
+
+
+    <!-- <div class="modal fade" id="addContent" tabindex="-1" aria-labelledby="addContentLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addContentLabel">新增行程</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="h5" for="text">標題</label>
+                        <input type="text" class="form-control" id="title" placeholder="新增標題" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">日期</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">時間</label>
+                        <input type="time" class="form-control" id="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="color">標註顏色</label>
+                        <div class="w-100 d-flex">
+                            <button class="btn btn-outline-danger mr-1"
+                                data-jscolor="{valueElement:'#color', alphaElement:'', previewElement:''}">
+                                Pick
+                            </button>
+                            <input class="form-control" id="color">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contents">事項內容</label>
+                        <textarea class="form-control" id="contents" rows="3"></textarea>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn btn-light" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-dark" data-dismiss="modal"
+                            onclick="AddContents()">加入</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+
+        <script src="main.js"></script>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>
